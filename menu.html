@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			body {
+				margin: 0 0 0 0;
+				padding: 0 0 0 0;
+				background-color: #262629;
+			}
+			@font-face {
+				font-family: 'quiche_sansmedium';
+				src: url('fonts/fontspring-demo-quichesans-medium-webfont.woff2') format('woff2'),
+				     url('fonts/fontspring-demo-quichesans-medium-webfont.woff') format('woff');
+				font-weight: normal;
+				font-style: normal;
+			}
+			a {
+				padding-bottom: 5vh;
+				font-family: 'quiche_sansmedium';
+		  		font-style: normal;
+		  		font-weight: 700;
+		  		font-size: 20px;
+				color: #B1DBDF;
+				text-decoration: none;
+			}
+			a:hover {
+				color: #FF625E;
+				cursor: pointer;
+			}
+			#header {
+				width: 450px;
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 3vh;
+			}
+			#menu-grid {
+				width: 33vw;
+				top: 27vh;
+				left: 33.5vw;
+				display: grid;
+				position: absolute;
+				margin-left: auto;
+				margin-right: auto;
+
+			}
+			.left-align {
+				text-align: left;
+			}
+			.right-align {
+				text-align: right;
+			}
+			.first-row {
+				grid-row: 1;
+			}
+			.second-row {
+				grid-row: 2;
+			}
+			.third-row {
+				grid-row: 3;
+			}
+			.fourth-row {
+				grid-row: 4;
+			}
+		</style>
+	</head>
+	<body>
+		<img id=header src=images/header.svg />
+		<div id=menu-grid>
+			<a class="first-row left-align" href=logos.html>logos</p>
+			<a class="first-row right-align" href=models.html>3D models</p>
+			<a class="second-row left-align">ai art</p>
+			<a class="second-row right-align">editorial layout</p>
+			<a class="third-row left-align">branding projects</p>
+			<a class="third-row right-align">misc art</p>
+			<a class="fourth-row left-align">photography</p>
+			<a class="fourth-row right-align">about</p>
+		</div>
+
+	</body>
+</html>

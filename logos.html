@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			@keyframes logoscrollgroup {
+				0% { left: -500vh; }
+				100% { left: -6vh; }
+			}
+			@keyframes logotypescrollgroup {
+				0% { left: 0vh; }
+				100% { left: -265vh; }
+			}
+			@font-face {
+				font-family: 'quiche_sansmedium';
+				src: url('fonts/fontspring-demo-quichesans-medium-webfont.woff2') format('woff2'),
+				     url('fonts/fontspring-demo-quichesans-medium-webfont.woff') format('woff');
+				font-weight: normal;
+				font-style: normal;
+			}
+			#logoscroll {
+				position: absolute;
+				animation: logoscrollgroup 25s linear infinite;
+				top: 22vh;
+				height: 22vh;
+				overflow: hidden;
+			}
+			#logotypescroll {
+				position: absolute;
+				animation: logotypescrollgroup 15s linear infinite;
+				top: 65vh;
+				height: 12vh;
+			}
+			#alyssanelson {
+				position: absolute;
+				width: 25vw;
+				left: 37.5vw;
+			}
+			#logos-label {
+				top: 10vh;
+			}
+			#logotypes-label {
+				top: 52vh;
+			}
+			#play-button {
+				top: 85vh;
+				left: 49vw;
+				height: 10vh;
+				position: absolute;
+			}
+			p {
+				position: absolute;
+				color: #FFA48F;
+				font-family: 'quiche_sansmedium';
+		  		font-style: normal;
+		  		font-weight: 700;
+		  		font-size: 24px;
+			}
+			#hamburger-img {
+				display: block;
+				margin-left: auto; 
+				margin-right: 3vw;
+				margin-top: 7vh;
+			}
+		</style>
+	</head>
+	<body>
+		<img id=alyssanelson src=images/alyssa_nelson.svg alt="Alyssa Nelson"/>
+		<div id=hamburger-div>
+			<a href=menu.html>
+				<img src=images/coral-menu.svg id=hamburger-img />
+			</a>
+		</div>
+		<p id=logos-label>Logos</p>
+		<img id=logoscroll src=images/logo-scroll-group.png alt="Scrolling Portfolio of Logos"/>
+		<p id=logotypes-label>Logotypes and Custom Typography</p>
+		<img id=logotypescroll src=images/logotype-scroll-group.png alt="Scrolling Portfolio of Logotypes"/>
+		<a href=models.html>
+			<img id=play-button src="images/play-button.svg" alt="Play button"/>
+		</a>
+	</body>
+</html>

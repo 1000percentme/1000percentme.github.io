@@ -1,1 +1,125 @@
-Hello World!
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+
+			/* In her captivating universe, */
+		  		/*position:x;*/
+			@keyframes fadeIn {
+				0% { opacity: 0; }
+				100% {opacity: 1; }
+			}
+			@keyframes fadeOut {
+				0% { opacity: 1; }
+				100% {opacity: 0; }
+			}
+			@keyframes zoomUp {
+				0% { top: 120vh; }
+				100% {top: 40vh; }
+			}
+			@font-face {
+				font-family: 'quiche_sansmedium';
+				src: url('fonts/fontspring-demo-quichesans-medium-webfont.woff2') format('woff2'),
+				     url('fonts/fontspring-demo-quichesans-medium-webfont.woff') format('woff');
+				font-weight: normal;
+				font-style: normal;
+			}
+			#captivating {
+				top: 4vh;
+				left: 22vw;
+		  		color: #FCE9CC;
+			}
+			#professionalism {
+				top: 22vh;
+				left: 64vw;
+				color: #FFCDAC;
+			}
+			#creativity {
+				top: 68vh;
+				left: 10vw;
+				color: #FFA48F;
+                        }
+			#nobounds {
+				top: 84vh;
+				left: 69vw;
+				color: #FF625E;
+			}
+			.landing-p {
+				font-family: 'quiche_sansmedium';
+		  		font-style: normal;
+		  		font-weight: 700;
+		  		font-size: 24px;
+				position: absolute;
+				animation: fadeIn 1.5s;
+			}
+			#an {
+				position: absolute;
+				top: 34vh;
+				left: 34vw;
+				height: 35vh;
+			}
+			#alyssa-nelson {
+				position: absolute;
+				top: 35.5vh;
+				left: 4vw;
+				height: 34vh;
+			}
+			.bottom-to-middle-button {
+				position: absolute;
+				left: 48vw;
+				top: 40vh;
+				height: 14vh;
+				animation: zoomUp 1s;
+			}
+			.hidden {
+				opacity: 0;
+				display: none;
+			}
+			.fade-to-hidden {
+				animation: fadeOut 1.5s;
+			}
+		</style>
+		
+
+	</head>
+	<body>
+		<p id=captivating class=hidden>In her captivating universe,</p>
+		<p id=professionalism class=hidden>professionalism dances with joy,</p>
+		<img id=an src="images/an.svg" alt="letters a and n"/>
+		<img onmouseover="hoverLogo()" id=alyssa-nelson src="images/alyssa-nelson.svg" alt="Artistic rendering of the name Alyssa Nelson"/>
+		<p id=creativity class=hidden>and creativity</p>
+		<p id=nobounds class=hidden>knows no bounds.</p>
+		<a href=logos.html>
+			<img id=play-button class=hidden src="images/play-button.svg" alt="Play button"/>
+		</a>
+	</body>
+	<script>
+		function sleep(ms) {
+			return new Promise(resolve => setTimeout(resolve, ms));
+		}
+		async function fadeInLandingP(elemId) {
+			let elem = document.getElementById(elemId);
+			elem.classList.remove('hidden');
+			elem.classList.add('landing-p');
+			await sleep(1500);
+		}
+		async function hoverLogo() {
+			console.log('hovered');
+			let alyssaNelson = document.getElementById("alyssa-nelson");
+			let an = document.getElementById("an");
+			alyssaNelson.classList.add("fade-to-hidden");
+			an.classList.add("fade-to-hidden");
+			await sleep(1500);
+			alyssaNelson.classList.add("hidden");
+			an.classList.add("hidden");
+			await fadeInLandingP("captivating");
+			await fadeInLandingP("professionalism");
+			await fadeInLandingP("creativity");
+			await fadeInLandingP("nobounds");
+			let playButton = document.getElementById("play-button");
+			playButton.classList.remove("hidden");
+			playButton.classList.add("bottom-to-middle-button");
+		}
+	</script>
+
+</html>

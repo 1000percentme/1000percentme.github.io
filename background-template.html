@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			body {
+				margin: 0 0 0 0;
+				padding: 0 0 0 0;
+			}
+			.with-background {
+				background-image: url('images/menu.png');
+				background-repeat: no-repeat;
+				background-attachment: fixed; 
+				background-position: center;
+				background-size: auto 100%;
+			}
+		</style>
+	</head>
+	<body class=with-background onkeydown="removeBackground(event)" onkeyup="addBackground(event)">
+	</body>
+	<script>
+		function removeBackground(event) {
+			if (event.key == "h") {
+				document.body.classList.remove('with-background');
+			}
+		}
+		function addBackground(event) {
+			if (event.key == "h") {
+				document.body.classList.add('with-background');
+			}
+		}
+	</script>
+</html>
